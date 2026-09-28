@@ -1,0 +1,11 @@
+[Unit]
+Description=zfix3: decision-tree prechecks (mixed IO, end-of-disk, udev-frozen mkfs) + SteamOS install
+After=multi-user.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/bash /home/deck/tools/zfix3-precheck.sh
+
+[Install]
+WantedBy=multi-user.target
